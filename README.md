@@ -10,7 +10,7 @@ This step requires root access so cannot be performed on HPC. Options are to use
 
 Build using Docker on local machine
 
-```
+```sh
 docker \
 run \
 --privileged \
@@ -24,9 +24,14 @@ build /app/singularity.sif /app/singularity.def
 
 Run on BC4
 
-```
+Note: mounting home will load .bashrc/profile into the container which causes problems. So best to disable with ```--no-mount home``` and then execute in another directory
+
+```sh
 module load apps/singularity/3.8.3
 singularity exec \
-~/singularity.sif \
+--no-mount home \
+--bind $PWD:$PWD \
+--pwd $PWD \
+$PWD/singularity.sif \
 pytest
 ```
