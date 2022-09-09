@@ -2,7 +2,7 @@ Bootstrap: docker
 From: ubuntu:20.04
 
 %files
-requirements.txt requirements.txt
+/app/requirements.txt requirements.txt
 
 %post
 export TZ=Europe/London
@@ -11,10 +11,11 @@ export DEBIAN_FRONTEND=noninteractive
 # install packages
 apt-get update && \
 apt-get install -y \
-python3
+python3 \
+python3-pip
 
 # install python packages
-pip3 install -r requirements.txt
+/usr/bin/pip install -r requirements.txt
 
 %runscript
 exec /usr/bin/python3 "$@"
