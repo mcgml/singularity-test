@@ -36,3 +36,7 @@ singularity exec \
 $PWD/singularity.sif \
 /usr/bin/python3 -m pytest
 ```
+
+# Build image with Github Acitons
+
+TODO
