@@ -1,5 +1,7 @@
 # Singularity
 
+Singularity is now known as [Apptainer](https://apptainer.org/)
+
 ## Definition file
 
 Singularity defition file is very similar to Dockerfile. A Dockerfile can be converted to Singularity format with [spython](https://pypi.org/project/spython/) but is easy to do manually, see [docs](https://docs.sylabs.io/guides/3.8/user-guide/definition_files.html). Example python definition file [here](singularity.def)
