@@ -37,6 +37,6 @@ $PWD/singularity.sif \
 /usr/bin/python3 -m pytest
 ```
 
-# Build image with Github Acitons
+## Build image with Github Acitons
 
-TODO
+TODO. See https://github.com/singularityhub/github-ci
