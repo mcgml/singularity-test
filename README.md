@@ -14,10 +14,11 @@ Build using Docker on local machine
 docker \
 run \
 --privileged \
+-w /app \
 -it \
 -v `pwd`:/app \
 quay.io/singularity/singularity:v3.8.4 \
-build /app/singularity.sif /app/singularity.def
+build singularity.sif singularity.def
 ```
 
 ## Execute
@@ -33,5 +34,5 @@ singularity exec \
 --bind $PWD:$PWD \
 --pwd $PWD \
 $PWD/singularity.sif \
-pytest
+/usr/bin/python3 -m pytest
 ```
