@@ -8,7 +8,7 @@ Singularity defition file is very similar to Dockerfile. A Dockerfile can be con
 
 ## Build
 
-This step requires root access so cannot be performed on HPC. Options are to use [remote builder](https://cloud.sylabs.io/builder) OR Docker on local machine. Singularity does not run natively on macos/Windows.
+This step requires root access so cannot be performed on HPC. Options are to use [remote builder](https://cloud.sylabs.io/builder) OR Docker on local machine. Singularity does not run natively on macos/Windows. Could also build image with [GitHub Actions](https://github.com/singularityhub/github-ci)
 
 Build using Docker on local machine
 
@@ -38,7 +38,3 @@ singularity exec \
 $PWD/singularity.sif \
 /usr/bin/python3 -m pytest
 ```
-
-## Build image with Github Acitons
-
-TODO. See https://github.com/singularityhub/github-ci
